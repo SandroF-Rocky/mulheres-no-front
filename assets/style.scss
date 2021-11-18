@@ -1,0 +1,924 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300;400;500;700&family=Raleway:wght@300;400;500;700&display=swap');
+
+$orange: #F14E03;
+$darkBlue: #1E3B51;
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Raleway";
+}
+html, body{
+    overflow-x: hidden;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    background-color: $orange;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+    div, ul.desktopMenu{
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+    }
+
+    
+    .mobileMenuToggle{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        z-index: 1000;
+        transition: all ease-in-out 0.5s;
+        i{
+            font-size: 40px;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+
+
+    ul.desktopMenu{
+        display: flex;
+        justify-content: space-around;
+        line-height: 50px;
+        max-width: 700px;
+        width: 70%;
+        li {
+            a{
+                color: #fff;
+                font-size: 15px;
+                font-weight: bold;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.589);
+
+                transition: all ease-in-out 0.5s;
+                &:hover{
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+}
+
+ul.mobileMenu{
+    position: absolute;
+    left: 0;
+    top: -100%;
+    z-index: 999;
+    height: 300px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    transition: all ease-in-out 0.5s;
+    box-shadow: 1px  2px 15px 2px rgba(0, 0, 0, 0.589);;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    li {
+        height: 15%;
+        a{
+            color: $orange;
+            font-size: 19px;
+            font-weight: bold;
+            transition: all ease-in-out 0.5s;
+            &:hover{
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+ul.mobileMenu.active{
+    top: 50px;  
+}
+
+
+.ctaBTN{
+    background: $orange;
+    width: 200px;
+    height: 50px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.075em;
+    margin: 0 auto;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.589);
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    &:hover{
+        opacity: 0.9;
+    }
+}
+
+h2{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.589);
+
+}
+
+.container{
+    width: 90%;
+    height: 100%;
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
+}
+
+header{
+    background-image: url(images/headerBG.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    margin-bottom: -45px;
+    .container{
+        top: 50px;
+        .column{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .columnLeft{
+            .columnText{
+                height: 350px;
+                width: 350px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                h1{
+                    color: $darkBlue;
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.589);
+    
+                    span{
+                        color: $orange
+                    }
+                }
+    
+                p{
+                    color: #232323;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 28px;
+    
+                }
+            }
+        }
+    
+        .columnRight {
+            img{
+                height: 400px;
+            }
+        }
+    
+        .ctaBTN{
+            margin-left: -3px;
+        }
+    }
+    
+    
+}
+
+section.divisor{
+    height: 245px;
+    width: 200%;
+    background-color: #232323;
+    overflow: hidden;
+    transform: rotate(-5deg) translateX(-50%);
+    position: relative;
+    left: 50%;
+    margin-bottom: 100px;
+}
+
+section.aboutTheCourse{
+    height: auto;
+    width: 100%;
+    padding-bottom: 45px;
+    background-color: #232323;
+
+    h2{
+        color: #fff;
+        margin-top: -100px;
+    }
+
+    .container{
+        max-width: 1200px;
+        height: auto;
+        .blocksContainer{
+            width: 100%;
+            height: 345px;
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-around;
+            .blockSingle{
+                height: 100%;
+                width: 315px;
+                background: rgb(235,85,29);
+                background: linear-gradient(180deg, rgba(235,85,29,1) 0%, rgba(240,128,31,1) 100%);
+                border-radius: 7px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                -webkit-border-radius: 7px;
+                -moz-border-radius: 7px;
+                -ms-border-radius: 7px;
+                -o-border-radius: 7px;
+                outline: 8px solid rgba(235,85,29,1);
+                text-align: center;
+                img{
+                    height: 200px
+                }
+
+                p{
+                    font-size: 18px;
+                    color: #fff;
+                    font-weight: bold;
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.589);
+                }
+            }
+
+            .centerBlock{
+                margin-top: -40px;
+            }
+        }
+    }
+    .textCta{
+        max-width: 550px;
+        margin: 0 auto;
+        margin-top: 60px;
+        text-align: center;
+
+        span{
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .ctaBTN{
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+    }
+
+}
+
+section.tecnologias{
+    height: auto;
+    padding-bottom: 50px;
+    width: 100%;
+    background-image: url(images/headerBG.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+    
+    h2{
+        color: #1E3B51;
+    }
+
+    p{  
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: 85%;
+        max-width: 765px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 100px;
+        line-height: 37px;
+    }
+
+    .containerImages{
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 80%;
+        max-width: 850px;
+        height: 245px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    div.ctaBTN{
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+}
+
+section.aboutTheArea{
+    height: auto;
+    width: 100%;
+    position: relative;
+    z-index: 20;
+    padding-top: 100px;
+    background: #232323;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: auto;
+        .blockSingle{
+            height: 260px;
+            width: 260px;
+            background-color: white;
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            -ms-border-radius: 7px;
+            -o-border-radius: 7px;
+            outline: 8px solid rgba(235,85,29,1);
+            text-align: center;
+            img{
+                width: 50%;
+                margin: 0 auto;
+            }
+
+            p{
+                font-weight: bold;
+                font-size: 17px;
+                color: #4B4B4B
+            }
+        }
+        .blockCenter{
+            margin-top: -55px;
+        }
+    }
+
+    .ctaBTN{
+        position: relative;
+        top: 40px;
+    }
+
+}
+
+section.divisor.divisor2{
+    transform: rotate(5deg) translateX(-50%);
+    -webkit-transform: rotate(5deg) translateX(-50%);
+    -moz-transform: rotate(5deg) translateX(-50%);
+    -ms-transform: rotate(5deg) translateX(-50%);
+    -o-transform: rotate(5deg) translateX(-50%);
+}
+
+section.video{
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+    h2{
+        margin-top: -75px;
+    }
+
+    .container{
+        margin-top: 40px;
+        margin-bottom: 45px;
+        height: 75%;
+
+        .video{
+            width: 670px;
+            margin: 0 auto;
+            height: 350px;
+            
+            iframe{
+                width: 100%;
+                height: 100%
+            }
+        }
+    }
+}
+
+section.aboutRaccoon{
+    width: 100%;
+    height: 600px;
+    background: #232323;
+    padding-top: 20px;
+
+    h2{
+        color: #fff
+    }
+    .container{
+        display: flex;
+        height: 80%;
+        .containerRight{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 40px 0;
+            img{
+                height: 100px;
+                width: 260px;
+                margin: 0 auto;
+                margin-bottom: 55px;
+            }
+            p{
+                color: #fff;
+                display: block;
+                padding: 0 20px;
+                font-size: 18px;
+            }
+        }
+
+        .containerLeft, .containerRight{
+            width: 50%;
+            height: 90%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h3{
+                color: #fff;
+                margin-bottom: 15px;
+            }
+            .carouselContainer{
+                
+                .owl-carousel{
+                    height: 400px;
+                    width: 400px;
+                    margin: 0 auto;
+                    .containerImgSingle{
+                        height: 400px;
+                        width: 400px;
+                        display: grid;
+                        grid-template-rows: 1fr 1fr;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 5px;
+                        align-items: center;
+                        
+                        .premioSingle{
+                            background: #fff;
+                            height: 185px;
+                            width: 185px;
+                            position: relative;
+                            z-index: 2;
+                            margin: 0 auto;
+                            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.459);
+                            border-radius: 20px;
+                            padding-top: 20px;
+                            -webkit-border-radius: 20px;
+                            -moz-border-radius: 20px;
+                            -ms-border-radius: 20px;
+                            -o-border-radius: 20px;
+        
+                            .image{
+                                width: 150px;
+                                height: 85px;
+                                margin-top: 40px;
+                                margin: 0 auto;
+                                transition: height 0.2s opacity 0.4s;
+                                                        
+                                img, amp-img{
+                                    height: 100%;
+                                    width: 100%;
+                                }
+        
+                            }   
+                            
+                            .description{
+                                transition: font-size 0.2s opacity 0.4s;
+                                opacity: 0;
+                                font-size: 0px;
+                                font-weight: initial;
+                            }
+        
+                            &:hover{
+                                padding-top: 40px;
+                            }
+        
+                            &:hover .description{
+                                font-size: 13px;
+                                opacity: 1;
+                            }
+                            &:hover .image{
+                                height: 0px;
+                                opacity: 1;
+                            }
+                            p{
+                                margin-top: 15px;
+                                font-size: 14px;
+                                font-weight: bold;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    height: 150px;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+    .logo{
+        height: 50px;
+        width: 50px;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .midia{
+        height: 30px;
+        width: 220px;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px auto;
+        div{
+            width: 15%;
+            height: 100%;
+
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                line-height: 30px;
+                text-align: center;
+                i{  
+                    color: #232323;
+                    font-size: 25px
+                }
+            }
+        }
+    }
+}
+
+.slick-dots{
+    display: flex;
+    justify-content: space-around !important;
+    width: 100px !important;
+    margin: 0 auto !important;
+    margin-top: 15px !important;
+    z-index: 1;
+    li {
+        button{
+            color: transparent;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            background: #C4C4C4;
+            border: none;
+            outline: none;
+        }
+    }
+    li.slick-active{
+        button{
+            background: $orange
+        }
+    }
+}
+
+@media screen and(min-width: 1360px){
+    section.video h2{
+        margin-top: -130px;
+    }
+
+    header .container .columnLeft .columnText {
+        width: 410px;
+        h1{
+            font-size: 45px;
+        }
+
+        p{
+            font-size: 23px;
+            margin-top: 30px;
+        }
+
+        .ctaBTN{
+            margin-top: 40px;
+        }
+    }
+}
+@media screen and(min-width: 1680px){
+    section.video h2{
+        margin-top: -175px;
+    }
+
+    header .container .columnRight img {
+        height: 440px;
+    }
+}
+@media screen and(min-width: 1820px){
+    section.divisor{
+        height: 300px;
+    }
+}
+
+
+@media screen and (max-width: 1280px){
+    section.aboutTheCourse {
+
+        h2 {
+            margin-top: -160px;
+        }
+
+        .container {
+            width: 100%;
+
+            .blocksContainer{
+                height: 260px;
+
+                .blockSingle{
+                    width: 275px;
+
+                    img {
+                        height: 140px
+                    }
+
+                    p {
+                        font-size: 15px
+                    }
+                }
+            }
+        }
+    }
+  
+}
+
+@media screen and (max-width: 960px){
+    header .container{
+        top: 0;
+    }
+    header .container .columnRight img {
+        height: 360px
+    }
+
+    section.aboutTheCourse {
+
+        h2 {
+            margin-top: -160px;
+        }
+
+        .container {
+            width: 100%;
+
+            .blocksContainer{
+                height: 200px;
+
+                .blockSingle{
+                    width: 215px;
+                    height: 200px;
+                    img {
+                        height: 100px
+                    }
+
+                    p {
+                        font-size: 12px
+                    }
+                }
+            }
+        }
+
+        .textCta span {
+            font-size: 15px
+        }
+    }
+
+
+
+    section.tecnologias{
+        .containerImages {
+            height: 200px;
+            width: 750px;
+        } 
+
+        p{
+            font-size: 17px
+        }
+    }
+
+    section.aboutTheArea{
+        .container {
+            .blockSingle {
+                width: 200px;
+                height: 200px;
+
+                p{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    
+
+}
+
+@media screen and (max-width: 783px){
+
+    nav{
+        padding: 0 15px
+    }
+
+    section.aboutTheCourse {
+        align-items: center;
+
+        .container {
+            height: auto;
+            .blocksContainer{
+                height: auto;
+                flex-direction: column;
+                align-items: center;
+
+        
+
+
+                .blockSingle, .centerBlock {
+                    width: 275px;
+                    height: 260px;
+                    margin-bottom: 60px;
+                    margin-top: 20px;
+
+                    img {
+                        height: 140px
+                    }
+
+                    p {
+                        font-size: 15px
+                    }
+                }
+            }
+        }
+
+        .textCta{
+            width: 90%;
+            max-width: 400px;
+            span{
+                font-size: 18px
+            }
+        }
+    }
+
+    header .container .columnRight img {
+        height: 285px
+    }
+    header .container .columnLeft .columnText {
+        width: 300px
+    }
+    header .container .columnLeft .columnText h1{
+        font-size: 26px
+    }
+    header .container .columnLeft .columnText p {
+        font-size: 14px
+    }
+
+    section.tecnologias{
+        .containerImages {
+            height: 160px;
+            width: 600px;
+        } 
+
+        p{
+            font-size: 17px;
+            line-height: 30px
+        }
+    }
+
+    section.aboutTheArea{
+        padding-top: 20px;
+        .container {
+            flex-direction: column;
+
+            .blockSingle, .blockCenter{
+                margin-top: 75px;
+                width: 270px;
+                height: 270px;
+
+                img{
+                    width: 60%;
+                }
+
+                p{
+                    font-size: 17px
+                }
+            }
+        }
+
+        .ctaBTN{
+            top: 100px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 684px){
+    header .container .columnRight {
+        display: none;
+    }
+
+    header .container .column {
+        width: 80%
+    }
+
+    header .container .columnLeft .columnText h1 {
+        font-size: 32px
+    }
+
+    header .container .columnLeft .columnText p {
+        font-size: 16px;
+    }
+
+    header .container .columnLeft .columnText{
+        width: 330px;
+    }
+
+
+    nav ul.desktopMenu{
+        display: none;
+        margin: 0 auto;
+    }
+
+    nav .logo{
+        margin: 0 auto;
+    }
+
+    section.tecnologias{
+        .containerImages {
+            height: 100px;
+            width: 410px;
+        } 
+
+        p{
+            font-size: 16px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 420px){
+    header .container .column {
+        width: 100%;
+    }
+    header .container .columnLeft .columnText p {
+        font-size: 13px;
+    }
+
+    header .container .columnLeft .columnText h1 {
+        font-size: 26px;
+    }
+
+    section.aboutTheCourse .container .blocksContainer .blockSingle{
+        width: 215px;
+        height: 200px;
+        img {
+            height: 100px
+        }
+
+        p {
+            font-size: 12px
+        }
+    }
+
+    section.aboutTheCourse .textCta span{
+        font-size: 14px;
+    }
+
+    section.tecnologias{
+        .containerImages {
+            height: 90px;
+            width: 320px;
+        } 
+
+        p{
+            font-size: 12px;
+        }
+    }
+}
