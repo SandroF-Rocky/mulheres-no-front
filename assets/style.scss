@@ -33,7 +33,7 @@ nav{
     
     .mobileMenuToggle{
         position: absolute;
-        display: flex;
+        display: none;
         align-items: center;
         z-index: 1000;
         transition: all ease-in-out 0.5s;
@@ -775,7 +775,9 @@ footer{
 @media screen and (max-width: 783px){
 
     nav{
-        padding: 0 15px
+        padding: 0 15px;
+
+
     }
 
     section.aboutTheCourse {
@@ -870,6 +872,12 @@ footer{
 
 
 @media screen and (max-width: 684px){
+    nav{
+                
+        .mobileMenuToggle{
+            display: flex;
+        }
+    }
     h2{
         font-size: 25px;
     }
