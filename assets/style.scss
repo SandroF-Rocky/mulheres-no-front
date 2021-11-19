@@ -443,6 +443,7 @@ section.aboutRaccoon{
                 display: block;
                 padding: 0 20px;
                 font-size: 18px;
+                letter-spacing: 0.2em;
             }
         }
 
@@ -575,6 +576,10 @@ footer{
                 }
             }
         }
+    }
+
+    p{
+        text-align: center;
     }
 }
 
@@ -739,6 +744,31 @@ footer{
         }
     }
     
+    section.aboutRaccoon{
+
+        height: auto;
+        padding-bottom: 75px;
+
+        .container{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .containerRight, .containerLeft{
+                width: 100%;
+
+                .carouselContainer{
+                    transform: scale(.8);
+                }
+            }
+ 
+        }
+
+
+        .ctaBTN{
+            margin-top: 75px !important;
+        }
+    }
 
 }
 
@@ -840,6 +870,9 @@ footer{
 
 
 @media screen and (max-width: 684px){
+    h2{
+        font-size: 25px;
+    }
     header .container .columnRight {
         display: none;
     }
@@ -880,6 +913,45 @@ footer{
             font-size: 16px;
         }
     }
+
+    section.aboutRaccoon{
+        
+        .container{
+
+            .containerRight{
+                p{
+                    font-size: 14px
+                }
+            }
+            .containerLeft{
+                position: relative;
+                height: 400px;
+                text-align: center;
+                margin-top: 40px;
+                h3{
+                    position: absolute;
+                    top: 35px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .carouselContainer{
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    .containerImgSingle{
+                        transform: scale(.6);
+                    }
+                    .premioSingle{
+                        
+                        
+                    }
+
+                }
+            }
+ 
+        }
+
+    }
 }
 
 
@@ -919,6 +991,12 @@ footer{
 
         p{
             font-size: 12px;
+        }
+    }
+
+    footer{
+        p{
+            font-size: 10px
         }
     }
 }

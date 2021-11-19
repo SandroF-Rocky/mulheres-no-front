@@ -534,6 +534,7 @@ section.aboutRaccoon .container .containerRight p {
   display: block;
   padding: 0 20px;
   font-size: 18px;
+  letter-spacing: 0.2em;
 }
 
 section.aboutRaccoon .container .containerLeft, section.aboutRaccoon .container .containerRight {
@@ -697,6 +698,10 @@ footer .midia div a i {
   font-size: 25px;
 }
 
+footer p {
+  text-align: center;
+}
+
 .slick-dots {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -825,6 +830,32 @@ footer .midia div a i {
   section.aboutTheArea .container .blockSingle p {
     font-size: 13px;
   }
+  section.aboutRaccoon {
+    height: auto;
+    padding-bottom: 75px;
+  }
+  section.aboutRaccoon .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.aboutRaccoon .container .containerRight, section.aboutRaccoon .container .containerLeft {
+    width: 100%;
+  }
+  section.aboutRaccoon .container .containerRight .carouselContainer, section.aboutRaccoon .container .containerLeft .carouselContainer {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  section.aboutRaccoon .ctaBTN {
+    margin-top: 75px !important;
+  }
 }
 
 @media screen and (max-width: 783px) {
@@ -914,6 +945,9 @@ footer .midia div a i {
 }
 
 @media screen and (max-width: 684px) {
+  h2 {
+    font-size: 25px;
+  }
   header .container .columnRight {
     display: none;
   }
@@ -942,6 +976,32 @@ footer .midia div a i {
   }
   section.tecnologias p {
     font-size: 16px;
+  }
+  section.aboutRaccoon .container .containerRight p {
+    font-size: 14px;
+  }
+  section.aboutRaccoon .container .containerLeft {
+    position: relative;
+    height: 400px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  section.aboutRaccoon .container .containerLeft h3 {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  section.aboutRaccoon .container .containerLeft .carouselContainer {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  section.aboutRaccoon .container .containerLeft .carouselContainer .containerImgSingle {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 
@@ -974,6 +1034,9 @@ footer .midia div a i {
   }
   section.tecnologias p {
     font-size: 12px;
+  }
+  footer p {
+    font-size: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
